@@ -1,7 +1,13 @@
-{{page-title "VerticalCollectionEmber4EmberCliHtmlbars"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+{{#vertical-collection
+    (array 0 1 2 3 4 5 6 7 8 9 0)
+    tagName='ul'
+    estimateHeight=50
+    staticHeight=false
+    bufferSize=1
+    renderAll=false
+    renderFromLast=false
+     as |item i|}}
+    <li>
+      {{item}} {{i}}
+    </li>
+{{/vertical-collection}}
